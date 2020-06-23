@@ -33,4 +33,8 @@ describe Bandpass do
   it 'only changes values outside limits' do
     expect(subject.filter([10, 45, 100, 1001], 40, 1000)).to eq [40, 45, 100, 1000]
   end
+
+  it 'returns error if array is empty' do
+    expect { subject.filter([]) }.to raise_error 'Error'
+  end
 end
