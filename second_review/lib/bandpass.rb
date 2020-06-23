@@ -1,11 +1,14 @@
 class Bandpass
 
   def filter(frequencies)
-    if frequencies[0] < 40  
-      return [40]
-    else
-      return frequencies
-    end
+    frequencies.map { |frequency| 
+
+      if frequency < 40  
+        40
+      else
+        frequency
+      end
+  }
   end
 
 end
