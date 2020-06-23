@@ -22,4 +22,7 @@ describe Bandpass do
     expect(subject.filter([1001])).to eq [1000]
   end
 
+  it 'frequencies change to provided upper limit if above' do
+    expect(subject.filter([2000, 800], 40, 1500)).to eq [1500, 800]
+  end
 end
