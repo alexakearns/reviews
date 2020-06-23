@@ -29,4 +29,8 @@ describe Bandpass do
   it 'returns frequencies within default limit if not provided' do
     expect(subject.filter([10, 2000])).to eq [40, 1000]
   end
+
+  it 'only changes values outside limits' do
+    expect(subject.filter([10, 45, 100, 1001], 40, 1000)).to eq [40, 45, 100, 1000]
+  end
 end
