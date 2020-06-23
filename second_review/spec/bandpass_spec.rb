@@ -14,4 +14,8 @@ describe Bandpass do
     expect(subject.filter([10, 50])).to eq [40, 50]
   end
 
+  it 'frequency changed to provided lower limit if below' do
+    expect(subject.filter([5, 60], 10)).to eq [10, 60]
+  end
+
 end
