@@ -15,3 +15,5 @@ In    |   Out
 "Amber"        |  "Amber"
 "Green, Amber" | ["Green", "Amber"]
 "Green, Amber" | "Green": 1, "Amber": 1
+
+
